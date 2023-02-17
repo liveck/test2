@@ -1,0 +1,13 @@
+
+echo install proxy
+pip3 install jupyter-server-proxy
+mkdir -p  ~/.jupyter
+cp  ~/source/jupyter_server_config.py   ~/.jupyter
+jupyter labextension install @jupyterhub/jupyter-server-proxy
+
+
+echo install jupyterlab zh_cn
+pip3 install jupyterlab-language-pack-zh-CN
+mkdir -p  ~/.jupyter/lab/user-settings/\@jupyterlab/translation-extension
+cp  ~/source/plugin.jupyterlab-settings   ~/.jupyter/lab/user-settings/\@jupyterlab/translation-extension/plugin.jupyterlab-settings
+
